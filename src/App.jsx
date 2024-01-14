@@ -1,16 +1,13 @@
 import React from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
-import { countAtom } from "./Store/CountAtom";
+import Inputs from "./Components/Inputs";
+import Todos from "./Components/Todos";
 
 const App = () => {
-  // let count = useRecoilValue(countAtom);
-  let [count, setCount] = useRecoilState(countAtom);
-
   return (
-    <>
-      <div>Count is = {count}</div>
-      <button onClick={() => setCount(count + 1)}>Increase Value</button>
-    </>
+    <div>
+      <Inputs />
+      <Todos />
+    </div>
   );
 };
 
